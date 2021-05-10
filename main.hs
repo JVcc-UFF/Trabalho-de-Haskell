@@ -2,9 +2,9 @@ registro nome numero endereco=(nome,numero,endereco)
 
 getNome (nome,numero,endereco)=nome
 
-inserir registro lista=lista++[registro]
+inserirLista registro lista=lista++[registro]
 
-modificar registro lista=inserir registro (filter (naoEstaNaLista (getNome registro)) lista)
+modificar registro lista=inserirLista registro (filter (naoEstaNaLista (getNome registro)) lista)
 
 buscar _nome lista = filter (estaNaLista _nome) lista
 
@@ -16,27 +16,27 @@ naoEstaNaLista _nome (nome,_,_)
   |(_nome==nome) = False
   |otherwise = True
 
-remover _nome lista = filter (naoEstaNaLista "Pedro Souza") lista
+removerLista _nome lista = filter (naoEstaNaLista "Pedro Souza") lista
 
 main = do
   let novo=[]
   let listaT=[]
-  let novo=inserir (registro "Pedro Souza" 28875 "rua A") listaT
+  let novo=inserirLista (registro "Pedro Souza" 28875 "rua A") listaT
   let listaT=novo
   putStrLn "------------------Lista Telefonica------------------"  
   print listaT
   putStrLn "----------------------------------------------------"
-  let auxRem=remover "Pedro Souza" listaT
+  let auxRem=removerLista "Pedro Souza" listaT
   let listaT=auxRem
   putStrLn "------------------Lista Telefonica------------------"  
   print listaT
   putStrLn "----------------------------------------------------"
-  let novo=inserir (registro "Joao Victor" 94506 "rua B") listaT
+  let novo=inserirLista (registro "Joao Victor" 94506 "rua B") listaT
   let listaT=novo
   putStrLn "------------------Lista Telefonica------------------"  
   print listaT
   putStrLn "----------------------------------------------------"
-  let novo=inserir (registro "Barbara" 07040 "rua C") listaT
+  let novo=inserirLista (registro "Barbara" 07040 "rua C") listaT
   let listaT=novo
   putStrLn "------------------Lista Telefonica------------------"  
   print listaT
@@ -46,7 +46,7 @@ main = do
   putStrLn "------------------Lista Telefonica------------------"  
   print listaT
   putStrLn "----------------------------------------------------"
-  let busca = buscar "Joao Victor" listaT
+  let auxbusca = buscar "Joao Victor" listaT
   putStrLn "------------------Elemento Busca------------------"
-  print busca
+  print auxbusca
   putStrLn "----------------------------------------------------"
