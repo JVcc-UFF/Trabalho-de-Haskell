@@ -23,14 +23,30 @@ main = do
   let listaT=[]
   let novo=inserir (registro "Pedro Souza" 28875 "rua A") listaT
   let listaT=novo
+  putStrLn "------------------Lista Telefonica------------------"  
+  print listaT
+  putStrLn "----------------------------------------------------"
   let auxRem=remover "Pedro Souza" listaT
   let listaT=auxRem
+  putStrLn "------------------Lista Telefonica------------------"  
+  print listaT
+  putStrLn "----------------------------------------------------"
   let novo=inserir (registro "Joao Victor" 94506 "rua B") listaT
-  let listaT=novo
-  let novo=inserir (registro "Barbara" 07040 "rua C") listaT
-  let listaT=novo
-  let novo=modificar (registro "Lucas" 22568 "rua D") listaT
   let listaT=novo
   putStrLn "------------------Lista Telefonica------------------"  
   print listaT
+  putStrLn "----------------------------------------------------"
+  let novo=inserir (registro "Barbara" 07040 "rua C") listaT
+  let listaT=novo
+  putStrLn "------------------Lista Telefonica------------------"  
+  print listaT
+  putStrLn "----------------------------------------------------"
+  let novo=modificar (registro "Joao Victor" 22568 "rua D") listaT
+  let listaT=novo
+  putStrLn "------------------Lista Telefonica------------------"  
+  print listaT
+  putStrLn "----------------------------------------------------"
+  let busca = buscar "Joao Victor" listaT
+  putStrLn "------------------Elemento Busca------------------"
+  print busca
   putStrLn "----------------------------------------------------"
